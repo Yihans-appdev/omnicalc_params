@@ -54,8 +54,43 @@ class CalculationsController < ApplicationController
   end
   
   def process_square_form
-    @the_number = params["user_number"].to_i
+    @the_number = params["user_number"].to_f
     @the_square = @the_number**2.0
     render("calc_templates/square_results.html.erb")
   end
+  
+  # ----- Square Root Form ---------
+  
+  def square_root_form
+    render("calc_templates/sqrt_form.html.erb")
+  end
+  
+  def process_sqrt_form
+    @the_number = params["user_number"].to_f
+    @the_root = @the_number**(0.5)
+    render("calc_templates/sqrt_results.html.erb")
+  end  
+  
+  
+    # ----- Payment Form ---------
+  
+  def payment_form
+    render("calc_templates/payment_form.html.erb")
+  end
+  
+  def process_payment_form
+     
+     #Get input
+     @apr = params["user_apr"].to_f
+     @years = params["user_years"].to_f
+     @principal = params["user_principal"].to_f
+     
+     #Calculations
+    r = (@apr / 100.0) / 12.0
+    x = (1+r)**(@years*12)
+    @monthly_payment = (@principal*r*x)/(x-1)
+
+    render("calc_templates/payment_results.html.erb")
+  end  
+  
 end
