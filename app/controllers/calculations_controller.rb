@@ -47,6 +47,13 @@ class CalculationsController < ApplicationController
     })
   end
   
+  def calc_random
+    @min = params["min"].to_i
+    @max = params["max"].to_i
+    @rand=rand(@min...@max)
+    render("calc_templates/show_random.html.erb")
+  end
+  
   # ------- Square Form --------
   
   def square_form

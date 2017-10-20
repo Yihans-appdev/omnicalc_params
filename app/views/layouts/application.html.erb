@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>OmnicalcParams</title>
+  <title>Yihan's OmnicalcParams</title>
   <%= csrf_meta_tags %>
 
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -16,9 +16,56 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
 
   <%= javascript_include_tag 'application' %>
+
 </head>
 
 <body>
+
+  <table class="table">
+    <tbody>
+      <tr>
+        <th>Part I</th>
+        <td>
+          <a href="/flexible/square/5">Flexible Square Example</a>
+        </td>
+        <td>
+          <a href="/flexible/square_root/8">Flexible Square Root Example</a>
+        </td>
+        <td>
+          <a href="/flexible/payment/410/30/250000">Flexible Payment Example</a>
+        </td>
+        <td>
+          <a href="/flexible/random/5/100">Flexible Random Example</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Part II</th>
+        <td>
+          <a href="/square/new">Square Form</a>
+        </td>
+        <td>
+          <a href="/square_root/new">Square Root Form</a>
+        </td>
+        <td>
+          <a href="/payment/new">Payment Form</a>
+        </td>
+        <td>
+          <a href="/random/new">Random Form</a>
+        </td>
+      </tr>
+      <tr>
+        <th>Part III</th>
+        <td>
+          <a href="/word_count/new">Word Count Form</a>
+        </td>
+        <td>
+          <a href="/descriptive_stats/new">Stats Form</a>
+        </td>
+      </tr>
+    </tbody>
+
+  </div> 
+  
   <div class="container">
     <%= yield %>
   </div>
