@@ -15,8 +15,18 @@ Rails.application.routes.draw do
 ##Payment
   get("/payment/new", { :controller => "calculations", :action => "payment_form"})
   get("/payment/results", { :controller => "calculations", :action => "process_payment_form"})
-  
-  ##Random
+
+##Random
   get("/random/new", { :controller => "calculations", :action => "random_form"})
   get("/random/results", { :controller => "calculations", :action => "process_random_form"})
+
+##Word count
+  get("/word_count/new", { :controller => "wordcount", :action => "wordcount_form"})
+  get("/word_count/results", { :controller => "wordcount", :action => "process_wordcount_form"})
+  
+##Stats
+  get("/descriptive_stats/new", { :controller => "stats", :action => "stats_form"})
+  get("/descriptive_stats/results", { :controller => "stats", :action => "process_stats_form"})
+
+
 end

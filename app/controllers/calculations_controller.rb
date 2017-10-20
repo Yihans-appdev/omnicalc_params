@@ -109,5 +109,4 @@ class CalculationsController < ApplicationController
     render("calc_templates/random_results.html.erb")
   end
   
-  
 end
